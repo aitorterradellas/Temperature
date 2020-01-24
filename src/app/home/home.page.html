@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Temperature
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-col>
+            <b>City</b>
+        </ion-col>
+        <ion-col>
+            <b>
+                Value (&deg;C)
+            </b>
+        </ion-col>
+        <ion-col>
+            <b>
+                Date
+            </b>
+        </ion-col>
+        <ion-col>
+
+        </ion-col>
+    </ion-item>
+    <app-temperature *ngFor="let city of cities" [city]="city"></app-temperature>
+</ion-content>

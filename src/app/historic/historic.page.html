@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Historic of {{city}}
+        </ion-title>
+        <ion-button class="back-button" (click)="goBack()" title="Back">
+            <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-col>
+            <b>
+                Value (&deg;C)
+            </b>
+        </ion-col>
+        <ion-col>
+            <b>
+                Date
+            </b>
+        </ion-col>
+    </ion-item>
+    <app-temperature *ngFor="let item of list" [tempValues]="item" [historic]="true"></app-temperature>
+</ion-content>

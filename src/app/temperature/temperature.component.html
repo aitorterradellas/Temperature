@@ -1,0 +1,17 @@
+<ion-item>
+    <ion-col [hidden]="historic">
+        {{ temperature.getCity() }}
+    </ion-col>
+    <ion-col>
+        {{ temperature.getValue() }}
+    </ion-col>
+    <ion-col>
+        {{ temperature.displayDate() }}
+        <ion-spinner name="lines-small" [hidden]="!loading"></ion-spinner>
+    </ion-col>
+    <ion-col [hidden]="historic">
+        <ion-button (click)="goToHistoric()" title="Historic"> 
+            <ion-icon name="today"></ion-icon>
+        </ion-button>
+    </ion-col>
+</ion-item>
